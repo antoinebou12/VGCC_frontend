@@ -19,7 +19,9 @@
   <div class="right-panel">
     <h2>Chat</h2>
     <div class="chat-messages">
-      <!-- Chat messages go here -->
+      <div *ngFor="let message of chatMessages" [ngClass]="{'sender-message': message.senderType === 'sender', 'receiver-message': message.senderType === 'receiver'}">
+        <p><strong>{{ message.sender }}:</strong> {{ message.message }}</p>
+      </div>
     </div>
     <div class="chat-input">
       <!-- Chat input area goes here -->

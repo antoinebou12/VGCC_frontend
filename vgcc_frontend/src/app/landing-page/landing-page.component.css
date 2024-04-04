@@ -60,3 +60,13 @@
     float: right;
   }
   
+
+  .sender-message {
+    text-align: right;
+    /* Additional styling for sender messages */
+  }
+  
+  .receiver-message {
+    text-align: left;
+    /* Additional styling for receiver messages */
+  }

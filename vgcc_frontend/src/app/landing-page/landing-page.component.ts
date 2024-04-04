@@ -14,6 +14,14 @@ export class LandingPageComponent {
   users: any[] = [
     { name: 'User 1', description: 'Description of User 1' },
     { name: 'User 2', description: 'Description of User 2' },
-    // Add more users as needed
+    // Add more users as neede
   ];
+
+  chatMessages: { sender: string, message: string, senderType: 'sender' | 'receiver' }[] = [];
+
+  constructor() {
+    // Add test messages
+    this.chatMessages.push({ sender: 'Sender', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'Receiver', message: 'Hi there!', senderType: 'receiver' });
+  }
 }
