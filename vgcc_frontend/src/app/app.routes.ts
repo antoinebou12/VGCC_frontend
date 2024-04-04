@@ -6,5 +6,5 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: '', component: LandingPageComponent },
-    {path: '**', redirectTo: '', pathMatch: 'full'}
+    { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
