@@ -1,6 +1,28 @@
 <div class="container">
-    <h2>Chat</h2>
-    <p>landing-page works yeah!</p>
-    <button class = "btn btn-primary"> BOTÓN PRIMARIO 3 </button>
+  <div class="left-panel">
+    <h2>Registered Users</h2>
+    <div>
+      <button mat-raised-button class="btn btn-primary">Add Users</button>
+    </div>
+    <mat-expansion-panel *ngFor="let user of users">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ user.name }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>{{ user.description }}</p>
+      </mat-panel-description>
+    </mat-expansion-panel>
+    <div>
+      <button mat-raised-button class="btn btn-danger" >Reset Users</button>
+    </div>
   </div>
-
+  <div class="right-panel">
+    <h2>Chat</h2>
+    <div class="chat-messages">
+      <!-- Chat messages go here -->
+    </div>
+    <div class="chat-input">
+      <!-- Chat input area goes here -->
+    </div>
+  </div>
+</div>
