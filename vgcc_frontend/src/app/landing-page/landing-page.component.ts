@@ -21,7 +21,27 @@ export class LandingPageComponent {
 
   constructor() {
     // Add test messages
-    this.chatMessages.push({ sender: 'Sender', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'Receiver', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
+    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
   }
 }

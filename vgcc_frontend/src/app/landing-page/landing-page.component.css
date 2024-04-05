@@ -4,69 +4,70 @@
     width: 100%;
     margin: 0 auto;
 }
-  
-  .left-panel, .right-panel {
-    flex: 1;
-    padding: 1rem;
-    border: 1px solid #ddd;
-  }
-  
-  .left-panel {
-    border-right: none;
-  }
-  
-  .mat-expansion-panel {
-    margin-bottom: 1rem;
-  }
-  
-  .mat-panel-title {
-    font-weight: bold;
-  }
-  
-  .right-panel {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1rem;
-    margin-bottom: auto;
-  }
-  
-  .chat-input {
-    padding: 1rem;
-  }
-  
-  /* Bootstrap styles for buttons */
-  button.mat-raised-button {
-    margin-right: 5px;
-  }
-  
-  button.mat-raised-button.primary {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  button.mat-raised-button.warn {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
-  /* Align the "Add Users" button to the right */
-  .left-panel button.mat-raised-button.primary {
-    float: right;
-  }
-  
 
-  .sender-message {
-    text-align: right;
-    /* Additional styling for sender messages */
-  }
+.left-panel {
+  border-right: none;
+}
   
-  .receiver-message {
-    text-align: left;
-    /* Additional styling for receiver messages */
-  }
+.left-panel, .right-panel {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.mat-expansion-panel {
+  margin-bottom: 1rem;
+}
+
+.mat-panel-title {
+  font-weight: bold;
+}
+
+.right-panel {
+  display: flex;
+  height: 70vh;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.chat-messages {
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+  margin-bottom: auto;
+}
+
+.chat-input {
+  padding: 1rem;
+}
+
+/* Bootstrap styles for buttons */
+button.mat-raised-button {
+  margin-right: 5px;
+}
+
+button.mat-raised-button.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.mat-raised-button.warn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Align the "Add Users" button to the right */
+.left-panel button.mat-raised-button.primary {
+  float: right;
+}
+
+
+.sender-message {
+  text-align: right;
+  /* Additional styling for sender messages */
+}
+
+.receiver-message {
+  text-align: left;
+  /* Additional styling for receiver messages */
+}
