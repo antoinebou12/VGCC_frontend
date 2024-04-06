@@ -23,10 +23,13 @@
         <p><strong>{{ message.sender }}:</strong> {{ message.message }}</p>
       </div>
     </div>
-    <div class="chat-input">
-      <!-- Chat input area goes here -->
-      <input id="userInput" type="text" [(ngModel)]="newMessage" placeholder="Type your message...">
-      <button mat-raised-button (click)="sendMessage()">Send</button>
+  </div>
+  <div class="chat-input">
+    <div class="input-container">
+      <textarea id="userInput" type="text" [(ngModel)]="newMessage" placeholder="Type your message..." autocomplete="off" (keydown.enter)="sendMessage()"></textarea>
+      <button mat-icon-button color="primary" (click)="sendMessage()">
+        <mat-icon>send</mat-icon>
+      </button>
     </div>
   </div>
 </div>
