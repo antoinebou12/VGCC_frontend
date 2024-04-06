@@ -25,6 +25,8 @@
     </div>
     <div class="chat-input">
       <!-- Chat input area goes here -->
+      <input id="userInput" type="text" [(ngModel)]="newMessage" placeholder="Type your message...">
+      <button mat-raised-button (click)="sendMessage()">Send</button>
     </div>
   </div>
 </div>
