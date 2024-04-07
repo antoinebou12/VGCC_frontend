@@ -20,6 +20,11 @@
   </div>
   <div class="right-panel">
     <h2>Ask chatGPT anything about your calendars</h2>
+    <div>
+      <button *ngIf="showScrollDownButton" mat-icon-button class="scroll-down-button" color="primary" (click)="scrollToBottom()">
+        <mat-icon>arrow_downward</mat-icon>
+      </button>
+    </div>
     <div class="chat-messages">
       <div *ngFor="let message of chatMessages" [ngClass]="{'sender-message': message.senderType === 'sender', 'receiver-message': message.senderType === 'receiver'}">
         <p><strong>{{ message.sender }}:</strong> {{ message.message }}</p>

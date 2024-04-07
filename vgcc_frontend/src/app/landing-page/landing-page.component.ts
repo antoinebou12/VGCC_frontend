@@ -55,4 +55,21 @@ export class LandingPageComponent {
       textarea.style.height = (textarea.scrollHeight + 2) + 'px'; // Adjust height
     }
   }
+
+  showScrollDownButton: boolean = true;
+
+  // Function to handle chat panel scroll event
+  onChatScroll(event: Event) {
+    const chatPanel = event.target as HTMLElement;
+    // Check if the chat panel is scrolled up
+    this.showScrollDownButton = chatPanel.scrollTop + chatPanel.clientHeight < chatPanel.scrollHeight;
+  }
+
+  // Function to scroll to the top of the chat panel
+  scrollToBottom() {
+    const chatPanel = document.querySelector('.chat-messages') as HTMLElement;
+    if (chatPanel) {
+      chatPanel.scrollTop = chatPanel.scrollHeight;
+    }
+  }
 }
