@@ -115,3 +115,22 @@ button.mat-raised-button.warn {
 .mat-icon {
   font-size: 20px;
 }
+
+/* Add some margin and padding to the date inputs */
+input[type="date"] {
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the date inputs on focus */
+input[type="date"]:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color on focus */
+}
+
+/* Style the date inputs when they have a value */
+input[type="date"]:not(:placeholder-shown) {
+  border-color: #28a745; /* Change border color when input has a value */
+}
