@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { ChatService } from '../services/chat-service/chat.service'; // Import ChatService
 
 @Component({
   selector: 'app-landing-page',
@@ -19,32 +20,10 @@ export class LandingPageComponent {
     // Add more users as neede
   ];
 
-  chatMessages: { sender: string, message: string, senderType: 'sender' | 'receiver' }[] = [];
+  constructor(private chatService: ChatService) {}
 
-  constructor() {
-    // Add test messages
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
-    this.chatMessages.push({ sender: 'You', message: 'Hello!', senderType: 'sender' });
-    this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
+  get chatMessages() {
+    return this.chatService.chatMessages;
   }
 
   @Input() newMessage! : string;

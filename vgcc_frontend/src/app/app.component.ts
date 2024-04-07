@@ -13,4 +13,5 @@ import { NavbarComponent } from './navbar/navbar.component';
 })
 export class AppComponent {
   title = 'vgcc_frontend';
+
 }
