@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { ChatService } from '../services/chat-service/chat.service'; // Import ChatService
+import { UsersService } from '../services/users-service/users.service'; // Import UsersService
 
 @Component({
   selector: 'app-landing-page',
@@ -20,10 +21,14 @@ export class LandingPageComponent {
     // Add more users as neede
   ];
 
-  constructor(private chatService: ChatService) {}
+  constructor(private chatService: ChatService, private usersService: UsersService) {}
 
   get chatMessages() {
     return this.chatService.chatMessages;
+  }
+
+  get chatUsers() {
+    return this.usersService.users;
   }
 
   @Input() newMessage! : string;
