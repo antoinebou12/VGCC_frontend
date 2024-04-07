@@ -1,6 +1,37 @@
 <div class="container">
-    <h2>Chat</h2>
-    <p>landing-page works yeah!</p>
-    <button class = "btn btn-primary"> BOTÓN PRIMARIO 3 </button>
+  <div class="left-panel">
+    <h2>Add a new account. Pick the date range before</h2>
+    <div>
+      <input type="date" [(ngModel)]="startDate">
+      <input type="date" [(ngModel)]="endDate">
+      <button mat-raised-button class="btn btn-primary">Add a new account</button>
+    </div>
+    <mat-expansion-panel *ngFor="let user of users">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ user.name }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+        <p>{{ user.description }}</p>
+      </mat-panel-description>
+    </mat-expansion-panel>
+    <div>
+      <button mat-raised-button class="btn btn-danger" >Reset all</button>
+    </div>
   </div>
-
+  <div class="right-panel">
+    <h2>Chat</h2>
+    <div class="chat-messages">
+      <div *ngFor="let message of chatMessages" [ngClass]="{'sender-message': message.senderType === 'sender', 'receiver-message': message.senderType === 'receiver'}">
+        <p><strong>{{ message.sender }}:</strong> {{ message.message }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="chat-input">
+    <div class="input-container">
+      <textarea id="userInput" type="text" [(ngModel)]="newMessage" placeholder="Type your message..." autocomplete="off" (keydown.enter)="sendMessage()"></textarea>
+      <button mat-icon-button color="primary" (click)="sendMessage()">
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
