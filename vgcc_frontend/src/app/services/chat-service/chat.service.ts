@@ -14,8 +14,9 @@ export class ChatService {
     //this.chatMessages.push({ sender: 'chatGPT', message: 'Hi there!', senderType: 'receiver' });
   }
 
-  postToOpenAI(message: String):Observable<JSON> {
-    return this.http.post<JSON>('http://127.0.0.1:8000/openAI/llm/response', message);
+  postToOpenAI(inputText: string): Observable<any> {
+    const url = 'http://127.0.0.1:8000/openAI/llm/response/';
+    return this.http.post<any>(url, { input_text: inputText }); // Make sure input_text is correct
   }
 
   addMessage(message: { sender: string, message: string, senderType: 'sender' | 'receiver' }) {
