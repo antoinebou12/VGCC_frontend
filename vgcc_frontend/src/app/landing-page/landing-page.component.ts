@@ -39,16 +39,17 @@ export class LandingPageComponent {
       this.chatMessages.push({ sender: 'You', message: this.newMessage, senderType: 'sender' });
       
       //API
-      this.chatService.postToOpenAI(this.newMessage).subscribe(
-        response => {
+      this.chatService.postToOpenAI(this.newMessage).subscribe({
+        next: response => {
           this.openAIResponse = response['openAI response'];
           console.log('Response from OpenAI:', this.openAIResponse);
           this.chatMessages.push({ sender: 'chatGPT', message: this.openAIResponse.toString(), senderType: 'receiver' });
         },
-        error => {
+        error: error => {
           console.error('Error:', error);
           this.chatMessages.push({ sender: 'chatGPT', message: error.message || 'An error occurred', senderType: 'receiver' });
         }
+      }
       );     
       // Clear input box after sending message
       this.newMessage = '';
