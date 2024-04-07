@@ -51,37 +51,46 @@ export class LandingPageComponent {
         }
       }
       );     
+      //end of API
       // Clear input box after sending message
       this.newMessage = '';
     }
   }
 
   addNewAccountAndFetchEvents() {
-    
-    this.usersService.addNewAccountAndFetchEvents(this.startDate, this.endDate, true).subscribe((response: any) => {
-      this.usersService.users = response;
-      
-      console.log('Response from addNewAccountAndFetchEvents:', response);
-    },
-    (error) => {
-      console.error('Error:', error);
-    });
-  
+    //API
+    this.usersService.addNewAccountAndFetchEvents(this.startDate, this.endDate, true).subscribe({
+        next: response => {
+        this.usersService.users = response;
+        console.log('Response from addNewAccountAndFetchEvents:', response);
+      },
+      error: error => {
+        console.error('Error:', error);
+      }
+    }
+    );
+    //end of API
   }
 
   resetAll() {
-    this.usersService.resetAll().subscribe((response: any) => {
-      this.usersService.users = [];
-      
-      console.log('Response from resetAll:', response);
-      this.chatService.clearMessages();
-  
-    },
-    (error) => {
-      console.error('Error:', error);
-    });
+    //API
+    this.usersService.resetAll().subscribe({
+        next: response => {
+        this.usersService.users = [];
+          
+        console.log('Response from resetAll:', response);
+        this.chatService.clearMessages();
+      },
+      error: error => {
+        console.error('Error:', error);
+      }
+    }
+    );
+    //end of API
   
   }
+
+  //Methods for handling key press events
 
   onKeyPress(event: KeyboardEvent) {
     if (event.key === 'Enter') {

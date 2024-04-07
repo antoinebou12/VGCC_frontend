@@ -1,10 +1,10 @@
 <div class="container">
   <div class="left-panel">
-    <h2>Add a new account. Pick the date range before</h2>
+    <h2>Add a new calendar. Pick the date range before</h2>
     <div>
       <input type="date" [(ngModel)]="startDate">
       <input type="date" [(ngModel)]="endDate">
-      <button mat-raised-button class="btn btn-primary" (click)="addNewAccountAndFetchEvents()">Add a new account</button>
+      <button mat-raised-button class="btn btn-primary" (click)="addNewAccountAndFetchEvents()">Add a new calendar</button>
     </div>
     <mat-expansion-panel *ngFor="let user of users">
       <mat-expansion-panel-header>
