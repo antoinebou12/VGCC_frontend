@@ -17,9 +17,11 @@ export class LandingPageComponent {
 
   startDate: Date = new Date(); // Initialize with current date
   endDate: Date = new Date();   // Initialize with current date
+  openAIResponse: String = ''; // Initialize with empty string
 
   constructor(private chatService: ChatService, private usersService: UsersService) {}
 
+ 
   get chatMessages() {
     return this.chatService.chatMessages;
   }
@@ -35,9 +37,45 @@ export class LandingPageComponent {
     if (this.newMessage.trim() !== '') { // Ensure message is not empty
       // Add new message to chatMessages array with sender as "sender"
       this.chatMessages.push({ sender: 'You', message: this.newMessage, senderType: 'sender' });
+      
+      //API
+      this.chatService.postToOpenAI(this.newMessage).subscribe((response: any) => {
+        this.openAIResponse = response.text;
+        console.log('Response from OpenAI:', response);
+        this.chatMessages.push({ sender: 'chatGPT', message: this.openAIResponse.toString(), senderType: 'receiver' });
+      },
+      (error) => {
+        console.error('Error:', error);
+        this.chatMessages.push({ sender: 'chatGPT', message: error, senderType: 'receiver' });
+      });      
       // Clear input box after sending message
       this.newMessage = '';
     }
+  }
+
+  addNewAccountAndFetchEvents() {
+    
+    this.usersService.addNewAccountAndFetchEvents(this.startDate, this.endDate, true).subscribe((response: any) => {
+      this.usersService.users = response;
+      
+      console.log('Response from addNewAccountAndFetchEvents:', response);
+    },
+    (error) => {
+      console.error('Error:', error);
+    });
+  
+  }
+
+  resetAll() {
+    this.usersService.resetAll().subscribe((response: any) => {
+      this.usersService.users = [];
+      
+      console.log('Response from resetAll:', response);
+    },
+    (error) => {
+      console.error('Error:', error);
+    });
+  
   }
 
   onKeyPress(event: KeyboardEvent) {
