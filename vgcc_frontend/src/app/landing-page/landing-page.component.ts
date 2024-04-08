@@ -5,6 +5,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { ChatService } from '../services/chat-service/chat.service'; // Import ChatService
 import { UsersService } from '../services/users-service/users.service'; // Import UsersService
+import { MatDialog } from '@angular/material/dialog'; // Import MatDialog
+import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component'; // Import ConfirmationDialogComponent
 
 @Component({
   selector: 'app-landing-page',
@@ -19,7 +21,11 @@ export class LandingPageComponent {
   endDate: Date = new Date();   // Initialize with current date
   openAIResponse: String = ''; // Initialize with empty string
 
-  constructor(private chatService: ChatService, private usersService: UsersService) {}
+  constructor(
+    private chatService: ChatService, 
+    private usersService: UsersService,
+    private dialog: MatDialog
+  ) {}
 
  
   get chatMessages() {
@@ -104,6 +110,23 @@ export class LandingPageComponent {
     //end of API
   
   }
+
+
+  //Create a method in your component to open the popup message:
+  openConfirmationDialog(): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '300px',
+      data: { message: 'Are you sure you want to reset all?' }
+    });
+  
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        // Reset all logic goes here
+        this.resetAll();
+      }
+    });
+  }
+
 
   //Methods for handling key press events
 
