@@ -134,3 +134,17 @@ input[type="date"]:focus {
 input[type="date"]:not(:placeholder-shown) {
   border-color: #28a745; /* Change border color when input has a value */
 }
+
+.scroll-down-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chat-messages {
+  /* Add styles for chat messages container */
+  padding-right: 5%;
+  overflow-y: auto;
+  height: 300vh; /* Adjust the height as needed */
+  position: relative; /* Ensure button stays fixed inside chat panel */
+}

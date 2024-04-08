@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { importProvidersFrom } from '@angular/core';
 
@@ -12,5 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), 
     provideClientHydration(), 
     provideAnimationsAsync(),
+    provideHttpClient(withFetch()), // Update provideHttpClient to include withFetch()
     importProvidersFrom(HttpClientModule)]
 };
