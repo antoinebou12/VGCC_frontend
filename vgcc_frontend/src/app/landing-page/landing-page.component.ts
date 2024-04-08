@@ -57,7 +57,7 @@ export class LandingPageComponent {
       this.chatService.postToOpenAI(this.newMessage).subscribe({
         next: response => {
           this.openAIResponse = response['openAI response'];
-          console.log('Response from OpenAI:', this.openAIResponse);
+          //console.log('Response from OpenAI:', this.openAIResponse);
           this.chatMessages.push({ sender: 'chatGPT', message: this.openAIResponse.toString(), senderType: 'receiver' });
         },
         error: error => {
