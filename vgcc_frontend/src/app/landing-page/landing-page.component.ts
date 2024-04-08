@@ -30,6 +30,21 @@ export class LandingPageComponent {
     return this.usersService.users;
   }
 
+  ngOnInit() {
+    this.loadUsers(); // Call loadUsers method when component initializes
+  }
+
+  loadUsers() {
+    this.usersService.getListOfUsers().subscribe({
+      next: response => {
+        this.usersService.setUsers(response); // Update users array with response from service
+      },
+      error: error => {
+        console.error('Error fetching users:', error);
+      }
+    });
+  }
+
   @Input() newMessage! : string;
 
   sendMessage() {

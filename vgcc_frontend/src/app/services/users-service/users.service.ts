@@ -32,6 +32,10 @@ export class UsersService {
     );
   }
 
+  getListOfUsers(): Observable<any> {
+    return this.http.get<any>('http://127.0.0.1:8000/calendar/credentials-info');
+  }
+
   resetAll(): Observable<any> {
     return this.http.delete<any>('http://127.0.0.1:8000/calendar/delete-tokens').pipe(
       switchMap(() => {
@@ -47,7 +51,15 @@ export class UsersService {
     this.users.push(user);
   }
 
+  setUsers(users: []) {
+    this.users = users;
+  }
+
   clearUsers() {
     this.users = [];
   }
+
+  
+
+
 }
