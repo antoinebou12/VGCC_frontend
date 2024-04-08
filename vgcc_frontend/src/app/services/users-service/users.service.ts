@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { formatDate } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +18,13 @@ export class UsersService {
   }
 
   addNewAccountAndFetchEvents(startDate: Date, endDate: Date, addNewAccount: boolean): Observable<any> {
+    const startDateISO = formatDate(startDate, 'yyyy-MM-ddTHH:mm:ssZ', 'en-US');
+    const endDateISO = formatDate(endDate, 'yyyy-MM-ddTHH:mm:ssZ', 'en-US');
+
     return this.http.post<any>('http://127.0.0.1:8000/calendar/authorize', {input_boolean : addNewAccount}).pipe(
       switchMap(() => {
-        return this.http.get<any>('http://127.0.0.1:8000/get-calendar-events', { params: { startDate: startDate.toString(), endDate: endDate.toString() } });
+        console.log('Fetching events from:', startDate, 'to:', endDate);
+        return this.http.get<any>('http://127.0.0.1:8000/calendar/get-calendar-events', { params: { start: startDateISO.toString(), end: endDateISO.toString() } });
       }),
       switchMap(() => {
         return this.http.get<any>('http://127.0.0.1:8000/calendar/credentials-info');
