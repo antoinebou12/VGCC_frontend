@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5245477712841455042" datatype="html">
+        <source>About VGCC Project</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5866015107164728004" datatype="html">
+        <source>VGCC Software, licensed by Valentin Valencia, seamlessly integrates Valentin Google Calendar and ChatGPT services to provide comprehensive assistance with your Google Calendar events.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5713785535928970824" datatype="html">
+        <source>Key Features:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1825872411070594593" datatype="html">
+        <source>Select multiple Google Calendars and effortlessly query ChatGPT about any details within your agenda.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2867651378062458389" datatype="html">
+        <source>View events from your calendar spanning past, present, and future dates.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8251878669749011914" datatype="html">
+        <source>No personal user information is stored to ensure privacy.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4358484735917844645" datatype="html">
+        <source>How to Use:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8202908604558489052" datatype="html">
+        <source>Select the date range of events from your calendar that require assistance.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2189156059179406992" datatype="html">
+        <source>Click &quot;Add Calendar&quot; and consent to Google&apos;s terms.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4141998020481906305" datatype="html">
+        <source>Utilize the chat interface on the right to inquire about your calendars.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7164751387657012686" datatype="html">
+        <source>Press &quot;Reset All&quot; to permanently delete all accounts and chat history.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8743173472656777114" datatype="html">
+        <source>Examples of Use:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="341733255740028879" datatype="html">
+        <source>Include your personal and work calendar emails, then ask, &quot;What do I have planned for the next week? Are there any scheduling conflicts?&quot;</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5603074397291675398" datatype="html">
+        <source>Incorporate calendars of friends and seek advice on the ideal day and time for social gatherings or vacations.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2323938524932248452" datatype="html">
+        <source>Calendars added are valid for only 24 hours for security reasons.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2794338748814788394" datatype="html">
+        <source>The project is currently intended for local usage and is not recommended for deployment.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1378244504306853805" datatype="html">
+        <source>OpenAI API is utilized, and they enforce their own personal data policy.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3522511835151674010" datatype="html">
+        <source>VGCC stands for Valentin Google Calendar + ChatGPT integration.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3252390848355408911" datatype="html">
+        <source>Contact Me:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3716607990873526391" datatype="html">
+        <source>Looking to connect? Feel free to reach out to me on LinkedIn:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6320707661079349442" datatype="html">
+        <source>LinkedIn Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4260406927172020589" datatype="html">
+        <source>Explore the project repositories on GitHub:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4967509393522997319" datatype="html">
+        <source>Frontend GitHub Repository</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2020224617678253327" datatype="html">
+        <source>Backend GitHub Repository</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about/about.component.html</context>
+          <context context-type="linenumber">41,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1234709746630139322" datatype="html">
+        <source>Confirmation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2807800733729323332" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3542042671420335679" datatype="html">
+        <source>No</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1454506696105385879" datatype="html">
+        <source>Add a new calendar. Pick the date range before</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4669788540732095733" datatype="html">
+        <source>Add a new calendar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5577220171300329459" datatype="html">
+        <source>Expiry date: <x id="INTERPOLATION" equiv-text="{{ user.description }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="294733613808522039" datatype="html">
+        <source>Reset all</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7100686064646093036" datatype="html">
+        <source>Ask chatGPT anything about your calendars</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1070556603859709137" datatype="html">
+        <source>Type your message...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/landing-page/landing-page.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="487077452159084336" datatype="html">
+        <source>Select Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navbar/navbar.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
