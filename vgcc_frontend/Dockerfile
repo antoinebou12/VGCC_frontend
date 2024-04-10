@@ -37,5 +37,5 @@ EXPOSE 4200
 # Command to run the nginx server
 #CMD ["nginx", "-g", "daemon off;"]
 
-# Build: docker build -t vgcc_frontend
-# Run the container: docker run -d 4200:4200 vgcc_frontend
+# Build: docker build -t vgcc_frontend .
+# Run the container: docker run -d -p 4200:4200 vgcc_frontend
