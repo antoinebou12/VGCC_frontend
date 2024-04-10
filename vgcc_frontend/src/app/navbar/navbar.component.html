@@ -9,12 +9,12 @@
       <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/about" [style.fontSize]="selectedItem === '/about' ? '1.2rem' : null">About</a>
+            <a class="nav-link" routerLink="/about" [style.fontSize]="selectedItem === '/about' ? '1.2rem' : null" i18n>About</a>
           </li>
         </ul>
   
         <mat-form-field class="language-selector">
-          <mat-label>Select Language</mat-label>
+          <mat-label i18n>Select Language</mat-label>
           <mat-select>
             <mat-option value="fr">Español</mat-option>
             <mat-option value="en">English</mat-option>

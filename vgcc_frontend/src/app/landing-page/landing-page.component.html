@@ -1,25 +1,25 @@
 <div class="container">
   <div class="left-panel">
-    <h2>Add a new calendar. Pick the date range before</h2>
+    <h2 i18n>Add a new calendar. Pick the date range before</h2>
     <div>
       <input type="date" [(ngModel)]="startDate">
       <input type="date" [(ngModel)]="endDate">
-      <button mat-raised-button class="btn btn-primary" (click)="addNewAccountAndFetchEvents()">Add a new calendar</button>
+      <button mat-raised-button class="btn btn-primary" (click)="addNewAccountAndFetchEvents()" i18n>Add a new calendar</button>
     </div>
     <mat-expansion-panel *ngFor="let user of users">
       <mat-expansion-panel-header>
         <mat-panel-title>{{ user.name }}</mat-panel-title>
       </mat-expansion-panel-header>
       <mat-panel-description>
-        <p>Expiry date: {{ user.description }}</p>
+        <p i18n>Expiry date: {{ user.description }}</p>
       </mat-panel-description>
     </mat-expansion-panel>
     <div>
-      <button mat-raised-button class="btn btn-danger" (click)="openConfirmationDialog()">Reset all</button>
+      <button mat-raised-button class="btn btn-danger" (click)="openConfirmationDialog()" i18n>Reset all</button>
     </div>
   </div>
   <div class="right-panel">
-    <h2>Ask chatGPT anything about your calendars</h2>
+    <h2 i18n>Ask chatGPT anything about your calendars</h2>
     <div>
       <button *ngIf="showScrollDownButton" mat-icon-button class="scroll-down-button" color="primary" (click)="scrollToBottom()">
         <mat-icon>arrow_downward</mat-icon>
@@ -33,7 +33,7 @@
   </div>
   <div class="chat-input">
     <div class="input-container">
-      <textarea id="userInput" type="text" [(ngModel)]="newMessage" placeholder="Type your message..." autocomplete="off" (keydown.enter)="sendMessage()"></textarea>
+      <textarea id="userInput" type="text" [(ngModel)]="newMessage" placeholder="Type your message..." autocomplete="off" (keydown.enter)="sendMessage()" i18n-placeholder></textarea>
       <button mat-icon-button color="primary" (click)="sendMessage()">
         <mat-icon>send</mat-icon>
       </button>

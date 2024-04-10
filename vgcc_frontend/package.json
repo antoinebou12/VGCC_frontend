@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:vgcc_frontend": "node dist/vgcc_frontend/server/server.mjs"
+    "serve:ssr:vgcc_frontend": "node dist/vgcc_frontend/server/server.mjs",
+    "start:fr": "ng serve --configuration=fr-CA",
+    "start:es": "ng serve --configuration=es-CO"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,7 @@
     "@angular-devkit/build-angular": "^17.3.3",
     "@angular/cli": "^17.3.3",
     "@angular/compiler-cli": "^17.3.0",
+    "@angular/localize": "^17.3.3",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
