@@ -75,7 +75,18 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "fr-CA": {
+              "localize": [
+                "fr-CA"
+              ]
+            },
+            "es-CO": {
+              "localize": [
+                "es-CO"
+              ]
             }
+
           },
           "defaultConfiguration": "production"
         },
@@ -87,7 +98,14 @@
             },
             "development": {
               "buildTarget": "vgcc_frontend:build:development"
+            },
+            "fr-CA": {
+              "buildTarget": "vgcc_frontend:build:fr-CA"
+            },
+            "es-CO": {
+              "buildTarget": "vgcc_frontend:build:es-CO"
             }
+
           },
           "defaultConfiguration": "development"
         },

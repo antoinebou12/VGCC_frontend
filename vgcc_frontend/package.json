@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:vgcc_frontend": "node dist/vgcc_frontend/server/server.mjs"
+    "serve:ssr:vgcc_frontend": "node dist/vgcc_frontend/server/server.mjs",
+    "start:fr": "ng serve --configuration=fr-CA",
+    "start:es": "ng serve --configuration=es-CO"
   },
   "private": true,
   "dependencies": {
