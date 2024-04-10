@@ -4,6 +4,19 @@
   "newProjectRoot": "projects",
   "projects": {
     "vgcc_frontend": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr-CA": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": "/fr-CA/"
+          },
+          "es-CO": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": "/es-CO/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +26,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize":  [
+                "fr-CA",
+                "es-CO"
+              ],
             "outputPath": "dist/vgcc_frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -58,7 +75,18 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "fr-CA": {
+              "localize": [
+                "fr-CA"
+              ]
+            },
+            "es-CO": {
+              "localize": [
+                "es-CO"
+              ]
             }
+
           },
           "defaultConfiguration": "production"
         },
@@ -70,7 +98,14 @@
             },
             "development": {
               "buildTarget": "vgcc_frontend:build:development"
+            },
+            "fr-CA": {
+              "buildTarget": "vgcc_frontend:build:fr-CA"
+            },
+            "es-CO": {
+              "buildTarget": "vgcc_frontend:build:es-CO"
             }
+
           },
           "defaultConfiguration": "development"
         },
