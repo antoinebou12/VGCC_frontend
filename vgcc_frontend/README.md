@@ -1,3 +1,10 @@
+
+# How to run the locales
+
+`For english:` npm start
+`For spanish:` npm run start:es
+`Fos french:` npm run start:fr
+
 # VgccFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
