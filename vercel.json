@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "public": false,
+  "name": "VGCC_frontend",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "src/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/vgcc_frontend/src/index.html"
+    }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/vgcc_frontend/src/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/old-path",
+      "destination": "/new-path",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "x-custom-header", "value": "value" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'" }
+      ]
+    }
+  ],
+  "env": {
+    "API_KEY": "@api_key"
+  },
+  "build": {
+    "env": {
+      "API_KEY": "@api_key"
+    }
+  }
+}
